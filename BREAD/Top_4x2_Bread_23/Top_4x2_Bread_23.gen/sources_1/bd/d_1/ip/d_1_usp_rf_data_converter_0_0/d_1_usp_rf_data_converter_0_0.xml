@@ -11575,7 +11575,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.vin0_23" xilinx:dependency="spirit:decode( id(&apos;MODELPARAM_VALUE.C_ADC_Slice02_Enable&apos;) == 1 &amp;&amp; (id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 1 || id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 2))">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.vin0_23" xilinx:dependency="spirit:decode( id(&apos;MODELPARAM_VALUE.C_ADC_Slice02_Enable&apos;) == 1 &amp;&amp; (id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 1 || id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 2))">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -20852,7 +20852,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.vin0_23_p" xilinx:dependency="spirit:decode( id(&apos;MODELPARAM_VALUE.C_ADC_Slice02_Enable&apos;) == 1 &amp;&amp; (id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 1 || id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 2))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.vin0_23_p" xilinx:dependency="spirit:decode( id(&apos;MODELPARAM_VALUE.C_ADC_Slice02_Enable&apos;) == 1 &amp;&amp; (id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 1 || id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 2))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -20874,7 +20874,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.vin0_23_n" xilinx:dependency="spirit:decode( id(&apos;MODELPARAM_VALUE.C_ADC_Slice02_Enable&apos;) == 1 &amp;&amp; (id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 1 || id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 2))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.vin0_23_n" xilinx:dependency="spirit:decode( id(&apos;MODELPARAM_VALUE.C_ADC_Slice02_Enable&apos;) == 1 &amp;&amp; (id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 1 || id(&apos;MODELPARAM_VALUE.C_ADC0_Slices&apos;) == 2))">true</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -21928,7 +21928,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_ADC_Data_Width02&apos;)) * 16) - 1)">143</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_ADC_Data_Width02&apos;)) * 16) - 1)">127</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -21992,7 +21992,7 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_ADC_Data_Width03&apos;)) * 16) - 1)">143</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_ADC_Data_Width03&apos;)) * 16) - 1)">127</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -45491,7 +45491,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_Mixer_Mode00</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Mixer_Mode00">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Mixer_Mode00">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="long">
         <spirit:name>C_ADC_Data_Width00</spirit:name>
@@ -45571,7 +45571,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_Mixer_Mode01</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Mixer_Mode01">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Mixer_Mode01">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="long">
         <spirit:name>C_ADC_Data_Width01</spirit:name>
@@ -45623,7 +45623,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>C_ADC_Slice02_Enable</spirit:name>
-        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Slice02_Enable">false</spirit:value>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Slice02_Enable">true</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>C_ADC_Dither02</spirit:name>
@@ -45631,11 +45631,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_Data_Type02</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Data_Type02">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Data_Type02">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_Decimation_Mode02</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Decimation_Mode02">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Decimation_Mode02">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_OBS_Decimation_Mode02</spirit:name>
@@ -45651,11 +45651,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_Mixer_Mode02</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Mixer_Mode02">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Mixer_Mode02">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="long">
         <spirit:name>C_ADC_Data_Width02</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Data_Width02">9</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Data_Width02">8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="long">
         <spirit:name>C_ADC_OBS_Data_Width02</spirit:name>
@@ -45667,7 +45667,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_ADC_NCO_Freq02</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_NCO_Freq02">0.0</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_NCO_Freq02">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_NCO_Phase02</spirit:name>
@@ -45703,7 +45703,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>C_ADC_Slice03_Enable</spirit:name>
-        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Slice03_Enable">false</spirit:value>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Slice03_Enable">true</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="boolean">
         <spirit:name>C_ADC_Dither03</spirit:name>
@@ -45711,11 +45711,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_Data_Type03</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Data_Type03">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Data_Type03">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_Decimation_Mode03</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Decimation_Mode03">0</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Decimation_Mode03">2</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_OBS_Decimation_Mode03</spirit:name>
@@ -45731,11 +45731,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_Mixer_Mode03</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Mixer_Mode03">2</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Mixer_Mode03">1</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="long">
         <spirit:name>C_ADC_Data_Width03</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Data_Width03">9</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_Data_Width03">8</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="long">
         <spirit:name>C_ADC_OBS_Data_Width03</spirit:name>
@@ -45747,7 +45747,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="float">
         <spirit:name>C_ADC_NCO_Freq03</spirit:name>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_NCO_Freq03">0.0</spirit:value>
+        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_ADC_NCO_Freq03">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_ADC_NCO_Phase03</spirit:name>
@@ -48550,10 +48550,6 @@
       <spirit:enumeration>4</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_ae57517c</spirit:name>
-      <spirit:enumeration>9</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_c83186bc</spirit:name>
       <spirit:enumeration>15.625</spirit:enumeration>
       <spirit:enumeration>31.250</spirit:enumeration>
@@ -48570,13 +48566,6 @@
     <spirit:choice>
       <spirit:name>choice_list_d8920bdd</spirit:name>
       <spirit:enumeration>8</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_list_eba88d7c</spirit:name>
-      <spirit:enumeration>9</spirit:enumeration>
-      <spirit:enumeration>10</spirit:enumeration>
-      <spirit:enumeration>11</spirit:enumeration>
-      <spirit:enumeration>12</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_0d7a4b90</spirit:name>
@@ -48674,18 +48663,16 @@
       <spirit:enumeration spirit:text="I/Q->Real">0</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_pairs_5c2a65f4</spirit:name>
-      <spirit:enumeration spirit:text="Fs/2">0</spirit:enumeration>
-      <spirit:enumeration spirit:text="Fs/4">1</spirit:enumeration>
-      <spirit:enumeration spirit:text="-Fs/4">2</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_pairs_5e67ca2b</spirit:name>
       <spirit:enumeration spirit:text="Tile226">2</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_6071bc95</spirit:name>
       <spirit:enumeration spirit:text="Real">0</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_6140db23</spirit:name>
+      <spirit:enumeration spirit:text="I/Q->I/Q">1</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_7299e889</spirit:name>
@@ -48798,10 +48785,6 @@
       <spirit:name>choice_pairs_d9e74051</spirit:name>
       <spirit:enumeration spirit:text="Off">0</spirit:enumeration>
       <spirit:enumeration spirit:text="Enable TDD">1</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
-      <spirit:name>choice_pairs_e3612bad</spirit:name>
-      <spirit:enumeration spirit:text="Real->I/Q">0</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_e53b15e5</spirit:name>
@@ -49444,7 +49427,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Mixer_Mode00</spirit:name>
       <spirit:displayName>Mixer Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Mixer_Mode00" spirit:choiceRef="choice_pairs_aed8a7a4" spirit:order="53">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Mixer_Mode00" spirit:choiceRef="choice_pairs_aed8a7a4" spirit:order="53">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -49478,7 +49461,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Coarse_Mixer_Freq00</spirit:name>
       <spirit:displayName>Frequency</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Coarse_Mixer_Freq00" spirit:choiceRef="choice_pairs_5c2a65f4" spirit:order="56">2</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Coarse_Mixer_Freq00" spirit:choiceRef="choice_pairs_3f1ccca9" spirit:order="56">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -49670,7 +49653,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Mixer_Mode01</spirit:name>
       <spirit:displayName>Mixer Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Mixer_Mode01" spirit:choiceRef="choice_pairs_e3612bad" spirit:order="72">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Mixer_Mode01" spirit:choiceRef="choice_pairs_6140db23" spirit:order="72">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -49704,7 +49687,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Coarse_Mixer_Freq01</spirit:name>
       <spirit:displayName>Frequency</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Coarse_Mixer_Freq01" spirit:choiceRef="choice_pairs_5c2a65f4" spirit:order="75">2</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Coarse_Mixer_Freq01" spirit:choiceRef="choice_pairs_3f1ccca9" spirit:order="75">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -49812,7 +49795,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Slice02_Enable</spirit:name>
       <spirit:displayName>Enable ADC</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Slice02_Enable" spirit:order="84">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Slice02_Enable" spirit:order="84">true</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -49836,7 +49819,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Data_Type02</spirit:name>
       <spirit:displayName>Data Type</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Data_Type02" spirit:choiceRef="choice_pairs_6071bc95" spirit:order="86">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Data_Type02" spirit:choiceRef="choice_pairs_7299e889" spirit:order="86">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -49848,7 +49831,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Decimation_Mode02</spirit:name>
       <spirit:displayName>Decimation Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Decimation_Mode02" spirit:choiceRef="choice_pairs_4de6c91d" spirit:order="87">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Decimation_Mode02" spirit:choiceRef="choice_pairs_ccfa5927" spirit:order="87">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -49876,7 +49859,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.ADC_CalOpt_Mode02">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.ADC_CalOpt_Mode02">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -49896,7 +49879,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Mixer_Mode02</spirit:name>
       <spirit:displayName>Mixer Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Mixer_Mode02" spirit:choiceRef="choice_pairs_2b5de876" spirit:order="91">2</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Mixer_Mode02" spirit:choiceRef="choice_pairs_6140db23" spirit:order="91">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -49907,7 +49890,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADC_Data_Width02</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Data_Width02" spirit:choiceRef="choice_list_eba88d7c" spirit:order="92">9</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Data_Width02" spirit:choiceRef="choice_list_d8920bdd" spirit:order="92">8</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -49942,7 +49925,7 @@
     <spirit:parameter>
       <spirit:name>ADC_NCO_Freq02</spirit:name>
       <spirit:displayName>NCO Frequency (GHz)</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_NCO_Freq02" spirit:order="95" spirit:minimum="-10.0" spirit:maximum="10.0">0.0</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_NCO_Freq02" spirit:order="95" spirit:minimum="-10.0" spirit:maximum="10.0">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -49982,7 +49965,7 @@
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.ADC_Nyquist02">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.ADC_Nyquist02">true</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -50038,7 +50021,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Slice03_Enable</spirit:name>
       <spirit:displayName>Enable ADC</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Slice03_Enable" spirit:order="103">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Slice03_Enable" spirit:order="103">true</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -50062,7 +50045,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Data_Type03</spirit:name>
       <spirit:displayName>Data Type</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Data_Type03" spirit:choiceRef="choice_pairs_6071bc95" spirit:order="105">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Data_Type03" spirit:choiceRef="choice_pairs_7299e889" spirit:order="105">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -50074,7 +50057,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Decimation_Mode03</spirit:name>
       <spirit:displayName>Decimation Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Decimation_Mode03" spirit:choiceRef="choice_pairs_4de6c91d" spirit:order="106">0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Decimation_Mode03" spirit:choiceRef="choice_pairs_ccfa5927" spirit:order="106">2</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -50122,7 +50105,7 @@
     <spirit:parameter>
       <spirit:name>ADC_Mixer_Mode03</spirit:name>
       <spirit:displayName>Mixer Mode</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Mixer_Mode03" spirit:choiceRef="choice_pairs_abf6f0ea" spirit:order="110">2</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Mixer_Mode03" spirit:choiceRef="choice_pairs_6140db23" spirit:order="110">1</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -50133,7 +50116,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>ADC_Data_Width03</spirit:name>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Data_Width03" spirit:choiceRef="choice_list_ae57517c" spirit:order="111">9</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_Data_Width03" spirit:choiceRef="choice_list_d8920bdd" spirit:order="111">8</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -50168,7 +50151,7 @@
     <spirit:parameter>
       <spirit:name>ADC_NCO_Freq03</spirit:name>
       <spirit:displayName>NCO Frequency (GHz)</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_NCO_Freq03" spirit:order="114" spirit:minimum="-10.0" spirit:maximum="10.0">0.0</spirit:value>
+      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.ADC_NCO_Freq03" spirit:order="114" spirit:minimum="-10.0" spirit:maximum="10.0">0</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

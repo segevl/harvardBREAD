@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.123438",
-   "Default View_TopLeft":"-932,-510",
+   "Default View_ScaleFactor":"0.122957",
+   "Default View_TopLeft":"-927,-512",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -38,14 +38,14 @@ preplace inst usp_rf_data_converter_0 -pg 1 -lvl 2 -x 270 -y 1860 -defaultsOSRD
 preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1450 -y 1380 -defaultsOSRD
 preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 270 -y -60 -defaultsOSRD
 preplace netloc rst_adc0_peripheral_aresetn 1 1 10 -30 980 570J 980 1020 960 1300 960 1720 1020 2020 960 2380 960 2680 960 3040 1020 3370
-preplace netloc rst_dac0_peripheral_aresetn 1 0 4 -390 1950 -40 2040 NJ 2040 990
+preplace netloc rst_dac0_peripheral_aresetn 1 0 4 -390 1960 -40 2050 NJ 2050 990
 preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 0 12 -400 1000 -80 1000 630 1000 N 1000 N 1000 1690 1230 N 1230 2350 1330 2690 1440 3060 1250 3350 1000 3700
 preplace netloc usp_rf_data_converter_0_clk_adc0 1 1 10 -50 900 580 990 1060 970 1290 970 1730 1030 2010 970 2370 970 2670 970 3070 1030 3400
-preplace netloc usp_rf_data_converter_0_clk_dac0 1 0 3 -430 1970 -100 2030 620
+preplace netloc usp_rf_data_converter_0_clk_dac0 1 0 3 -430 1980 -90 2040 620
 preplace netloc xlconstant_0_dout 1 5 4 1710 1380 N 1380 N 1380 N
 preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 12 -430 -210 -60 -210 620 250 N 250 N 250 1670 1210 N 1210 2360 1340 2650 1450 3050 1260 3390 1260 3690
 preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 2 -40 50 600
-preplace netloc adc0_clk_1 1 0 2 N 1760 -100
+preplace netloc adc0_clk_1 1 0 2 N 1760 -110
 preplace netloc axi_dma_0_M_AXI_S2MM 1 0 13 -420 -500 N -500 N -500 N -500 N -500 N -500 N -500 N -500 N -500 N -500 N -500 N -500 4070
 preplace netloc axi_dma_1_M_AXI_S2MM 1 0 13 -410 -490 NJ -490 NJ -490 NJ -490 NJ -490 NJ -490 NJ -490 NJ -490 NJ -490 NJ -490 NJ -490 NJ -490 4080
 preplace netloc axi_dma_2_M_AXI_S2MM 1 0 13 -400 -480 NJ -480 NJ -480 NJ -480 NJ -480 NJ -480 NJ -480 NJ -480 NJ -480 NJ -480 NJ -480 NJ -480 4090
@@ -83,11 +83,11 @@ preplace netloc ps8_0_axi_periph_M09_AXI 1 3 3 NJ -50 NJ -50 1730
 preplace netloc ps8_0_axi_periph_M10_AXI 1 3 3 NJ -30 NJ -30 1700
 preplace netloc ps8_0_axi_periph_M11_AXI 1 1 3 -40 440 NJ 440 1030
 preplace netloc ps8_0_axi_periph_M12_AXI 1 0 4 -390 430 NJ 430 NJ 430 990
-preplace netloc sysref_in_1 1 0 2 NJ 1850 N
+preplace netloc sysref_in_1 1 0 2 NJ 1850 -110
 preplace netloc usp_rf_data_converter_0_m00_axis 1 2 1 590 860n
 preplace netloc usp_rf_data_converter_0_m01_axis 1 2 1 610 880n
 preplace netloc usp_rf_data_converter_0_vout00 1 2 11 N 1850 N 1850 N 1850 N 1850 N 1850 N 1850 N 1850 N 1850 N 1850 N 1850 N
-preplace netloc vin0_01_1 1 0 2 N 1820 -110
+preplace netloc vin0_01_1 1 0 2 N 1820 N
 preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 2 1 600 -410n
 levelinfo -pg 1 -470 -250 270 810 1160 1450 1860 2180 2500 2850 3200 3520 3890 4120
 pagesize -pg 1 -db -bbox -sgen -590 -560 4220 2230
