@@ -291,7 +291,7 @@
           "address_blocks": {
             "reg0": {
               "base_address": "0",
-              "range": "256",
+              "range": "4096",
               "usage": "register"
             }
           }

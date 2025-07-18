@@ -1,13 +1,14 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6E45AECD604EA487",
+      "boundary_crc": "0x6E45AECDB81F4284",
       "device": "xczu48dr-ffvg1517-2-e",
       "gen_directory": "../../../../Top_4x2_Bread_23.gen/sources_1/bd/d_1",
       "name": "d_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1"
+      "tool_version": "2023.1",
+      "validated": "true"
     },
     "design_tree": {
       "axis_accumulator_0": "",
@@ -18,7 +19,6 @@
       "axis_constant_iq_0": "",
       "axis_pfb_8x16_v1_0": "",
       "axis_reorder_iq_v1_0": "",
-      "axis_xfft_16x32768_0": "",
       "mr_buffer_et_0": "",
       "rst_100": "",
       "rst_adc0": "",
@@ -57,7 +57,8 @@
       "xlconstant_0": "",
       "zynq_ultra_ps_e_0": "",
       "axis_broadcaster_3": "",
-      "ila_0": ""
+      "ila_0": "",
+      "axis_xfft_16x32768_0": ""
     },
     "interface_ports": {
       "adc0_clk": {
@@ -166,6 +167,9 @@
           "AXIS_IN_DW": {
             "value": "64"
           },
+          "FFT_AW": {
+            "value": "10"
+          },
           "FFT_STORE": {
             "value": "1"
           },
@@ -260,12 +264,6 @@
             "value": "8"
           }
         }
-      },
-      "axis_xfft_16x32768_0": {
-        "vlnv": "user.org:user:axis_xfft_16x32768:1.0",
-        "xci_name": "d_1_axis_xfft_16x32768_0_0",
-        "xci_path": "ip/d_1_axis_xfft_16x32768_0_0/d_1_axis_xfft_16x32768_0_0.xci",
-        "inst_hier_path": "axis_xfft_16x32768_0"
       },
       "mr_buffer_et_0": {
         "vlnv": "user.org:user:mr_buffer_et:1.0",
@@ -5216,16 +5214,16 @@
             "value": "0"
           },
           "M00_TDATA_REMAP": {
-            "value": "tdata[255:0]"
+            "value": "tdata[127:0]"
           },
           "M01_TDATA_REMAP": {
-            "value": "tdata[255:0]"
+            "value": "tdata[127:0]"
           },
           "M_TDATA_NUM_BYTES": {
-            "value": "32"
+            "value": "16"
           },
           "S_TDATA_NUM_BYTES": {
-            "value": "32"
+            "value": "16"
           }
         }
       },
@@ -5239,6 +5237,12 @@
             "value": "AXI4S"
           }
         }
+      },
+      "axis_xfft_16x32768_0": {
+        "vlnv": "user.org:user:axis_xfft_16x32768:1.0",
+        "xci_name": "d_1_axis_xfft_16x32768_0_0",
+        "xci_path": "ip/d_1_axis_xfft_16x32768_0_0/d_1_axis_xfft_16x32768_0_0.xci",
+        "inst_hier_path": "axis_xfft_16x32768_0"
       }
     },
     "interface_nets": {
@@ -5530,14 +5534,14 @@
           "axis_chsel_pfb_x1_1/aresetn",
           "axis_pfb_8x16_v1_0/aresetn",
           "axis_reorder_iq_v1_0/aresetn",
-          "axis_xfft_16x32768_0/aresetn",
           "mr_buffer_et_0/s00_axis_aresetn",
           "axis_broadcaster_0/aresetn",
           "axis_broadcaster_1/aresetn",
           "axis_broadcaster_2/aresetn",
           "axis_clock_converter_0/s_axis_aresetn",
           "axis_combiner_0/aresetn",
-          "usp_rf_data_converter_0/m0_axis_aresetn"
+          "usp_rf_data_converter_0/m0_axis_aresetn",
+          "axis_xfft_16x32768_0/aresetn"
         ]
       },
       "rst_dac0_peripheral_aresetn": {
@@ -5596,7 +5600,6 @@
           "axis_chsel_pfb_x1_1/aclk",
           "axis_pfb_8x16_v1_0/aclk",
           "axis_reorder_iq_v1_0/aclk",
-          "axis_xfft_16x32768_0/aclk",
           "mr_buffer_et_0/s00_axis_aclk",
           "rst_adc0/slowest_sync_clk",
           "axis_broadcaster_0/aclk",
@@ -5606,7 +5609,8 @@
           "axis_combiner_0/aclk",
           "usp_rf_data_converter_0/m0_axis_aclk",
           "axis_broadcaster_3/aclk",
-          "ila_0/clk"
+          "ila_0/clk",
+          "axis_xfft_16x32768_0/aclk"
         ]
       },
       "usp_rf_data_converter_0_clk_dac0": {

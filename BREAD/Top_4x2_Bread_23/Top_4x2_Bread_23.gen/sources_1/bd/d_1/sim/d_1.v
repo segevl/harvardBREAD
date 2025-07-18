@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-//Date        : Wed Jul  2 11:44:19 2025
+//Date        : Fri Jul 18 16:49:25 2025
 //Host        : pc0 running 64-bit Ubuntu 24.04.2 LTS
 //Command     : generate_target d_1.bd
 //Design      : d_1
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "d_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=d_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=44,numReposBlks=29,numNonXlnxBlks=10,numHierBlks=15,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "d_1.hwdef" *) 
+(* CORE_GENERATION_INFO = "d_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=d_1,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=46,numReposBlks=31,numNonXlnxBlks=10,numHierBlks=15,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "d_1.hwdef" *) 
 module d_1
    (adc0_clk_clk_n,
     adc0_clk_clk_p,
@@ -137,6 +137,10 @@ module d_1
   wire [1:1]axis_broadcaster_2_M01_AXIS_TLAST;
   wire [31:16]axis_broadcaster_2_M01_AXIS_TUSER;
   wire [1:1]axis_broadcaster_2_M01_AXIS_TVALID;
+  wire [127:0]axis_broadcaster_3_M00_AXIS_TDATA;
+  wire [0:0]axis_broadcaster_3_M00_AXIS_TVALID;
+  wire [255:128]axis_broadcaster_3_M01_AXIS_TDATA;
+  wire [1:1]axis_broadcaster_3_M01_AXIS_TVALID;
   wire [31:0]axis_buffer_0_m_axis_TDATA;
   wire axis_buffer_0_m_axis_TLAST;
   wire axis_buffer_0_m_axis_TREADY;
@@ -416,7 +420,6 @@ module d_1
   wire usp_rf_data_converter_0_clk_adc0;
   wire usp_rf_data_converter_0_clk_dac0;
   wire [127:0]usp_rf_data_converter_0_m00_axis_TDATA;
-  wire [0:0]usp_rf_data_converter_0_m00_axis_TREADY;
   wire usp_rf_data_converter_0_m00_axis_TVALID;
   wire [127:0]usp_rf_data_converter_0_m01_axis_TDATA;
   wire [1:1]usp_rf_data_converter_0_m01_axis_TREADY;
@@ -465,6 +468,7 @@ module d_1
   wire zynq_ultra_ps_e_0_M_AXI_HPM0_FPD_WVALID;
   wire zynq_ultra_ps_e_0_pl_clk0;
   wire zynq_ultra_ps_e_0_pl_resetn0;
+  wire [1:0]NLW_axis_combiner_0_s_axis_tready_UNCONNECTED;
 
   assign adc0_clk_1_CLK_N = adc0_clk_clk_n;
   assign adc0_clk_1_CLK_P = adc0_clk_clk_p;
@@ -790,6 +794,13 @@ module d_1
         .s_axis_tlast(axis_xfft_16x32768_0_m_axis_TLAST),
         .s_axis_tuser(axis_xfft_16x32768_0_m_axis_TUSER),
         .s_axis_tvalid(axis_xfft_16x32768_0_m_axis_TVALID));
+  d_1_axis_broadcaster_0_1 axis_broadcaster_3
+       (.aclk(usp_rf_data_converter_0_clk_adc0),
+        .aresetn(rst_ps8_0_99M_peripheral_aresetn),
+        .m_axis_tdata({axis_broadcaster_3_M01_AXIS_TDATA,axis_broadcaster_3_M00_AXIS_TDATA}),
+        .m_axis_tvalid({axis_broadcaster_3_M01_AXIS_TVALID,axis_broadcaster_3_M00_AXIS_TVALID}),
+        .s_axis_tdata(usp_rf_data_converter_0_m00_axis_TDATA),
+        .s_axis_tvalid(usp_rf_data_converter_0_m00_axis_TVALID));
   d_1_axis_buffer_0_0 axis_buffer_0
        (.m_axis_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .m_axis_aresetn(rst_ps8_0_99M_peripheral_aresetn),
@@ -941,9 +952,9 @@ module d_1
         .m_axis_tdata(axis_combiner_0_M_AXIS_TDATA),
         .m_axis_tready(axis_combiner_0_M_AXIS_TREADY),
         .m_axis_tvalid(axis_combiner_0_M_AXIS_TVALID),
-        .s_axis_tdata({usp_rf_data_converter_0_m01_axis_TDATA,usp_rf_data_converter_0_m00_axis_TDATA}),
-        .s_axis_tready({usp_rf_data_converter_0_m01_axis_TREADY,usp_rf_data_converter_0_m00_axis_TREADY}),
-        .s_axis_tvalid({usp_rf_data_converter_0_m01_axis_TVALID,usp_rf_data_converter_0_m00_axis_TVALID}));
+        .s_axis_tdata({usp_rf_data_converter_0_m01_axis_TDATA,axis_broadcaster_3_M01_AXIS_TDATA}),
+        .s_axis_tready({usp_rf_data_converter_0_m01_axis_TREADY,NLW_axis_combiner_0_s_axis_tready_UNCONNECTED[0]}),
+        .s_axis_tvalid({usp_rf_data_converter_0_m01_axis_TVALID,axis_broadcaster_3_M01_AXIS_TVALID}));
   d_1_axis_constant_iq_0_0 axis_constant_iq_0
        (.m_axis_aclk(usp_rf_data_converter_0_clk_dac0),
         .m_axis_aresetn(rst_dac0_peripheral_aresetn),
@@ -1016,6 +1027,17 @@ module d_1
         .m_axis_tvalid(axis_xfft_16x32768_0_m_axis_TVALID),
         .s_axis_tdata(axis_broadcaster_1_M00_AXIS_TDATA),
         .s_axis_tvalid(axis_broadcaster_1_M00_AXIS_TVALID));
+  d_1_ila_0_0 ila_0
+       (.clk(usp_rf_data_converter_0_clk_adc0),
+        .probe0(1'b1),
+        .probe1(axis_broadcaster_3_M00_AXIS_TDATA),
+        .probe2({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .probe3(axis_broadcaster_3_M00_AXIS_TVALID),
+        .probe4(1'b0),
+        .probe5(1'b0),
+        .probe6({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
+        .probe7(1'b0),
+        .probe8(1'b0));
   d_1_mr_buffer_et_0_0 mr_buffer_et_0
        (.m00_axis_aclk(zynq_ultra_ps_e_0_pl_clk0),
         .m00_axis_aresetn(rst_ps8_0_99M_peripheral_aresetn),
@@ -1381,7 +1403,7 @@ module d_1
         .dac0_clk_n(dac0_clk_1_CLK_N),
         .dac0_clk_p(dac0_clk_1_CLK_P),
         .m00_axis_tdata(usp_rf_data_converter_0_m00_axis_TDATA),
-        .m00_axis_tready(usp_rf_data_converter_0_m00_axis_TREADY),
+        .m00_axis_tready(1'b1),
         .m00_axis_tvalid(usp_rf_data_converter_0_m00_axis_TVALID),
         .m01_axis_tdata(usp_rf_data_converter_0_m01_axis_TDATA),
         .m01_axis_tready(usp_rf_data_converter_0_m01_axis_TREADY),
@@ -1415,6 +1437,8 @@ module d_1
         .sysref_in_p(sysref_in_1_diff_p),
         .vin0_01_n(vin0_01_1_V_N),
         .vin0_01_p(vin0_01_1_V_P),
+        .vin0_23_n(1'b0),
+        .vin0_23_p(1'b0),
         .vout00_n(usp_rf_data_converter_0_vout00_V_N),
         .vout00_p(usp_rf_data_converter_0_vout00_V_P));
   d_1_xlconstant_0_0 xlconstant_0

@@ -88,7 +88,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS.TDATA_NUM_BYTES">32</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS.TDATA_NUM_BYTES">16</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -219,7 +219,7 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">255</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">127</spirit:left>
               <spirit:right spirit:format="long">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -255,7 +255,7 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">31</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">15</spirit:left>
               <spirit:right spirit:format="long">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -291,7 +291,7 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">31</spirit:left>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">15</spirit:left>
               <spirit:right spirit:format="long">0</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
@@ -324,7 +324,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.TDATA_NUM_BYTES">32</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M00_AXIS.TDATA_NUM_BYTES">16</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -455,8 +455,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">511</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">256</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">255</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">128</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -491,8 +491,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">63</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">32</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">31</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">16</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -527,8 +527,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">63</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">32</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">31</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((1 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">16</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -560,7 +560,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>TDATA_NUM_BYTES</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M01_AXIS.TDATA_NUM_BYTES">32</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.M01_AXIS.TDATA_NUM_BYTES">16</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -691,8 +691,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">767</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">512</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">383</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">256</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -727,8 +727,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">95</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">64</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">47</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">32</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -763,8 +763,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">95</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">64</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">47</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((2 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">32</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -934,8 +934,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1023</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">768</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">511</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">384</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -970,8 +970,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">127</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">96</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">63</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">48</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1006,8 +1006,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">127</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">96</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">63</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((3 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">48</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1177,8 +1177,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1279</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1024</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">639</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">512</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1213,8 +1213,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">159</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">128</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">79</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">64</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1249,8 +1249,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">159</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">128</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">79</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((4 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">64</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1420,8 +1420,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1535</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1280</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">767</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">640</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1456,8 +1456,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">191</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">160</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">95</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">80</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1492,8 +1492,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">191</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">160</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">95</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((5 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">80</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1663,8 +1663,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1791</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1536</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">895</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">768</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1699,8 +1699,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">223</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">192</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">111</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">96</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1735,8 +1735,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">223</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">192</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">111</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((6 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">96</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1906,8 +1906,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">2047</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1792</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1023</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">896</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1942,8 +1942,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">255</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">224</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">127</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">112</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -1978,8 +1978,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">255</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">224</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">127</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((7 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">112</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2149,8 +2149,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">2303</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">2048</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1151</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1024</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2185,8 +2185,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">287</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">256</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">143</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">128</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2221,8 +2221,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">287</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">256</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">143</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((8 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">128</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2392,8 +2392,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">2559</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">2304</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1279</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1152</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2428,8 +2428,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">319</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">288</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">159</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">144</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2464,8 +2464,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">319</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">288</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">159</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((9 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">144</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2635,8 +2635,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">2815</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">2560</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1407</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1280</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2671,8 +2671,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">351</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">320</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">175</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">160</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2707,8 +2707,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">351</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">320</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">175</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((10 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">160</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2878,8 +2878,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">3071</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">2816</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1535</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1408</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2914,8 +2914,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">383</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">352</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">191</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">176</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -2950,8 +2950,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">383</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">352</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">191</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((11 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">176</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3121,8 +3121,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">3327</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">3072</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1663</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1536</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3157,8 +3157,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">415</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">384</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">207</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">192</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3193,8 +3193,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">415</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">384</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">207</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((12 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">192</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3364,8 +3364,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">3583</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">3328</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1791</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1664</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3400,8 +3400,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">447</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">416</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">223</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">208</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3436,8 +3436,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">447</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">416</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">223</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((13 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">208</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3607,8 +3607,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">3839</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">3584</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">1919</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1792</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3643,8 +3643,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">479</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">448</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">239</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">224</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3679,8 +3679,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">479</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">448</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">239</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((14 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">224</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3850,8 +3850,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tdata</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">4095</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">3840</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">2047</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1) + 1)">1920</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3886,8 +3886,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tkeep</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">511</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">480</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">255</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">240</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -3922,8 +3922,8 @@
           <spirit:physicalPort>
             <spirit:name>m_axis_tstrb</spirit:name>
             <spirit:vector>
-              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">511</spirit:left>
-              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">480</spirit:right>
+              <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((16 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">255</spirit:left>
+              <spirit:right spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((15 * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1) + 1)">240</spirit:right>
             </spirit:vector>
           </spirit:physicalPort>
         </spirit:portMap>
@@ -4259,6 +4259,130 @@
     </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jul 18 20:48:19 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:4ae49ca4</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_synthesisconstraints</spirit:name>
+        <spirit:displayName>Synthesis Constraints</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis.constraints</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_synthesisconstraints_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jul 18 20:47:29 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:4ae49ca4</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
+        <spirit:displayName>Verilog Simulation</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>top_d_1_axis_broadcaster_0_1</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_xilinx_com_ip_axis_infrastructure_1_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jul 18 20:49:30 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:edeace5a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsimulationwrapper</spirit:name>
+        <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>d_1_axis_broadcaster_0_1</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jul 18 20:49:30 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:edeace5a</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>top_d_1_axis_broadcaster_0_1</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_xilinx_com_ip_axis_infrastructure_1_1__ref_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jul 18 20:47:29 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:4ae49ca4</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
+        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>d_1_axis_broadcaster_0_1</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Fri Jul 18 20:47:29 UTC 2025</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:4ae49ca4</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
     <spirit:ports>
       <spirit:port>
         <spirit:name>aclk</spirit:name>
@@ -4267,7 +4391,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4279,7 +4404,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4291,7 +4417,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -4313,7 +4440,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -4335,7 +4463,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4352,17 +4481,18 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) - 1)">255</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) - 1)">127</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="({(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;))){0}})" spirit:bitStringLength="8">0x0000000000000000000000000000000000000000000000000000000000000000</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="({(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;))){0}})" spirit:bitStringLength="8">0x00000000000000000000000000000000</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -4378,17 +4508,18 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="({((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) / 8)){1}})" spirit:bitStringLength="1">0xFFFFFFFF</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="({((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) / 8)){1}})" spirit:bitStringLength="1">0xFFFF</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -4404,17 +4535,18 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">31</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) / 8) - 1)">15</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
-            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="({((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) / 8)){1}})" spirit:bitStringLength="1">0xFFFFFFFF</spirit:defaultValue>
+            <spirit:defaultValue spirit:format="bitString" spirit:resolve="dependent" spirit:dependency="({((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH&apos;)) / 8)){1}})" spirit:bitStringLength="1">0xFFFF</spirit:defaultValue>
           </spirit:driver>
         </spirit:wire>
         <spirit:vendorExtensions>
@@ -4432,7 +4564,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -4458,7 +4591,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -4484,7 +4618,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -4510,7 +4645,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -4536,7 +4672,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4559,7 +4696,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
           <spirit:driver>
@@ -4579,13 +4717,14 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">511</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) - 1)">255</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4602,13 +4741,14 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">63</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4625,13 +4765,14 @@
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">63</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((spirit:decode(id(&apos;MODELPARAM_VALUE.C_NUM_MI_SLOTS&apos;)) * spirit:decode(id(&apos;MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH&apos;))) / 8) - 1)">31</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4654,7 +4795,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4677,7 +4819,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4700,7 +4843,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4723,7 +4867,8 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>wire</spirit:typeName>
-              <spirit:viewNameRef>dummy_view</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
         </spirit:wire>
@@ -4747,11 +4892,11 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S_AXIS_TDATA_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH">256</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S_AXIS_TDATA_WIDTH">128</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_M_AXIS_TDATA_WIDTH</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH">256</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_M_AXIS_TDATA_WIDTH">128</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_AXIS_TID_WIDTH</spirit:name>
@@ -4782,6 +4927,170 @@
       <spirit:enumeration spirit:text="Yes">1</spirit:enumeration>
     </spirit:choice>
   </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>d_1_axis_broadcaster_0_1.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>d_1_axis_broadcaster_0_1_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>d_1_axis_broadcaster_0_1_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>d_1_axis_broadcaster_0_1_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>d_1_axis_broadcaster_0_1_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_synthesisconstraints_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>d_1_axis_broadcaster_0_1_ooc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_xilinx_com_ip_axis_infrastructure_1_1__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/8713/hdl/axis_infrastructure_v1_1_0.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+        <spirit:logicalName>axis_infrastructure_v1_1_0</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>axis_infrastructure_v1_1_0</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_infrastructure" xilinx:version="1.1" xilinx:isGenerated="true" xilinx:checksum="ea44fec2">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdl/tdata_d_1_axis_broadcaster_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/tuser_d_1_axis_broadcaster_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/ab66/hdl/axis_broadcaster_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>axis_broadcaster_v1_1_27</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/top_d_1_axis_broadcaster_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+        <spirit:exportedName>top_d_1_axis_broadcaster_0_1</spirit:exportedName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/d_1_axis_broadcaster_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_xilinx_com_ip_axis_infrastructure_1_1__ref_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/8713/hdl/axis_infrastructure_v1_1_0.vh</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:isIncludeFile>true</spirit:isIncludeFile>
+        <spirit:logicalName>axis_infrastructure_v1_1_0</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/8713/hdl/axis_infrastructure_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>axis_infrastructure_v1_1_0</spirit:logicalName>
+      </spirit:file>
+      <spirit:vendorExtensions>
+        <xilinx:subCoreRef>
+          <xilinx:componentRef xilinx:vendor="xilinx.com" xilinx:library="ip" xilinx:name="axis_infrastructure" xilinx:version="1.1" xilinx:isGenerated="true" xilinx:checksum="ea44fec2">
+            <xilinx:mode xilinx:name="copy_mode"/>
+          </xilinx:componentRef>
+        </xilinx:subCoreRef>
+      </spirit:vendorExtensions>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>hdl/tdata_d_1_axis_broadcaster_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/tuser_d_1_axis_broadcaster_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/ab66/hdl/axis_broadcaster_v1_1_vl_rfs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>axis_broadcaster_v1_1_27</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>d_1_axis_broadcaster_0_1_ooc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/top_d_1_axis_broadcaster_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+        <spirit:exportedName>top_d_1_axis_broadcaster_0_1</spirit:exportedName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/d_1_axis_broadcaster_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
   <spirit:description>The AXI4-Stream Broadcaster IP provides the ability to replicate one SI stream onto multiple MI stream channels.</spirit:description>
   <spirit:parameters>
     <spirit:parameter>
@@ -4799,7 +5108,7 @@
     <spirit:parameter>
       <spirit:name>M_TDATA_NUM_BYTES</spirit:name>
       <spirit:displayName>MI TDATA Width (bytes)</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M_TDATA_NUM_BYTES" spirit:order="3" spirit:minimum="0" spirit:maximum="512" spirit:rangeType="long">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.M_TDATA_NUM_BYTES" spirit:order="3" spirit:minimum="0" spirit:maximum="512" spirit:rangeType="long">16</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -4811,7 +5120,7 @@
     <spirit:parameter>
       <spirit:name>S_TDATA_NUM_BYTES</spirit:name>
       <spirit:displayName>SI TDATA Width (bytes)</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.S_TDATA_NUM_BYTES" spirit:order="4" spirit:minimum="0" spirit:maximum="512" spirit:rangeType="long">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.S_TDATA_NUM_BYTES" spirit:order="4" spirit:minimum="0" spirit:maximum="512" spirit:rangeType="long">16</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -4943,7 +5252,7 @@
     <spirit:parameter>
       <spirit:name>M00_TDATA_REMAP</spirit:name>
       <spirit:displayName>M00 TDATA Remap String</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.M00_TDATA_REMAP" spirit:order="15">tdata[255:0]</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.M00_TDATA_REMAP" spirit:order="15">tdata[127:0]</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -4955,7 +5264,7 @@
     <spirit:parameter>
       <spirit:name>M01_TDATA_REMAP</spirit:name>
       <spirit:displayName>M01 TDATA Remap String</spirit:displayName>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.M01_TDATA_REMAP" spirit:order="16">tdata[255:0]</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.M01_TDATA_REMAP" spirit:order="16">tdata[127:0]</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -5356,6 +5665,9 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>AXI4-Stream Broadcaster</xilinx:displayName>
+      <xilinx:xpmLibraries>
+        <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
+      </xilinx:xpmLibraries>
       <xilinx:coreRevision>27</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.CLKIF.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
@@ -5374,7 +5686,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.HAS_TSTRB" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.LAYERED_METADATA" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.PHASE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.TDATA_NUM_BYTES" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.TDATA_NUM_BYTES" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.TDEST_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.TID_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXIS.TUSER_WIDTH" xilinx:valuePermission="bd"/>
@@ -5386,7 +5698,7 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXIS.HAS_TSTRB" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXIS.LAYERED_METADATA" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXIS.PHASE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXIS.TDATA_NUM_BYTES" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXIS.TDATA_NUM_BYTES" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXIS.TDEST_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXIS.TID_WIDTH" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M01_AXIS.TUSER_WIDTH" xilinx:valuePermission="bd"/>
@@ -5394,16 +5706,16 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.RSTIF.TYPE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TKEEP" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TLAST" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TREADY" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TSTRB" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TKEEP" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TLAST" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TREADY" xilinx:valueSource="propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.HAS_TSTRB" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.LAYERED_METADATA" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.PHASE" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TDATA_NUM_BYTES" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TDEST_WIDTH" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TID_WIDTH" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TUSER_WIDTH" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TDATA_NUM_BYTES" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TDEST_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TID_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TUSER_WIDTH" xilinx:valueSource="constant_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.HAS_TKEEP" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.HAS_TLAST" xilinx:valueSource="propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.HAS_TREADY" xilinx:valueSource="user" xilinx:valuePermission="bd_and_user"/>

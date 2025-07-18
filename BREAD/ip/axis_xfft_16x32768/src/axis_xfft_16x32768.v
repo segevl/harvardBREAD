@@ -1,5 +1,6 @@
 // This block integrates 16 XFFT blocks, 32768 points each.
 // Scaling and forward/inverse FFT are all controlled together.
+//nf temp mod
 module axis_xfft_16x32768
 	(
 		// s_axis_* and m_axis_* reset and clock.
