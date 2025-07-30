@@ -270,7 +270,7 @@
           "address_blocks": {
             "reg0": {
               "base_address": "0",
-              "range": "64",
+              "range": "4096",
               "usage": "register"
             }
           }

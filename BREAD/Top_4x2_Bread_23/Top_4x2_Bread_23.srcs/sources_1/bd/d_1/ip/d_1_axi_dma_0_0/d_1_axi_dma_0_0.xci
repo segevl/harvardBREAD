@@ -421,7 +421,7 @@
       },
       "address_spaces": {
         "Data_S2MM": {
-          "range": "4294967296",
+          "range": "36G",
           "width": "32"
         }
       },

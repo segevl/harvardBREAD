@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.123438",
-   "Default View_TopLeft":"-932,-510",
+   "Default View_ScaleFactor":"0.568016",
+   "Default View_TopLeft":"-1479,1037",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -93,4 +93,4 @@ levelinfo -pg 1 -470 -250 270 810 1160 1450 1860 2180 2500 2850 3200 3520 3890 4
 pagesize -pg 1 -db -bbox -sgen -590 -560 4220 2230
 "
 }
-
+0
