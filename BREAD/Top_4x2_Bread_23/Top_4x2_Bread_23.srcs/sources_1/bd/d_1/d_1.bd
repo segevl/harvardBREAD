@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6E45AECD604EA487",
+      "boundary_crc": "0x6E45AECDB81F4284",
       "device": "xczu48dr-ffvg1517-2-e",
       "gen_directory": "../../../../Top_4x2_Bread_23.gen/sources_1/bd/d_1",
       "name": "d_1",
@@ -2167,6 +2167,9 @@
           },
           "ADC_NCO_Freq00": {
             "value": "-1.0"
+          },
+          "ADC_Nyquist00": {
+            "value": "1"
           },
           "ADC_Slice02_Enable": {
             "value": "false"
