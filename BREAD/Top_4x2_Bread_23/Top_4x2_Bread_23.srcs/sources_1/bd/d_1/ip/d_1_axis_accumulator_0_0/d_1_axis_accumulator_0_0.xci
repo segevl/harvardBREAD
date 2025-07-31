@@ -10,7 +10,7 @@
       "component_parameters": {
         "AXIS_IN_DW": [ { "value": "64", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "AXIS_OUT_DW": [ { "value": "128", "resolve_type": "user", "format": "long", "usage": "all" } ],
-        "FFT_AW": [ { "value": "15", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "FFT_AW": [ { "value": "10", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "BANK_ARRAY_AW": [ { "value": "4", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "MEM_DW": [ { "value": "72", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "MEM_PIPE": [ { "value": "6", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -21,7 +21,7 @@
       "model_parameters": {
         "AXIS_IN_DW": [ { "value": "64", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "AXIS_OUT_DW": [ { "value": "128", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "FFT_AW": [ { "value": "15", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "FFT_AW": [ { "value": "10", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "BANK_ARRAY_AW": [ { "value": "4", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "MEM_DW": [ { "value": "72", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "MEM_PIPE": [ { "value": "6", "resolve_type": "generated", "format": "long", "usage": "all" } ],

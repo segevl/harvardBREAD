@@ -3,8 +3,8 @@
   "ip_inst": {
     "xci_name": "d_1_axis_xfft_16x32768_0_0",
     "cell_name": "axis_xfft_16x32768_0",
-    "component_reference": "user.org:user:axis_xfft_16x32768:1.0",
-    "ip_revision": "8",
+    "component_reference": "user.org:user:axis_xfft_16x32768:1.1024",
+    "ip_revision": "1",
     "gen_directory": "../../../../../../Top_4x2_Bread_23.gen/sources_1/bd/d_1/ip/d_1_axis_xfft_16x32768_0_0",
     "parameters": {
       "component_parameters": {
@@ -25,7 +25,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "8" } ],
+        "IPREVISION": [ { "value": "1" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../Top_4x2_Bread_23.gen/sources_1/bd/d_1/ip/d_1_axis_xfft_16x32768_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

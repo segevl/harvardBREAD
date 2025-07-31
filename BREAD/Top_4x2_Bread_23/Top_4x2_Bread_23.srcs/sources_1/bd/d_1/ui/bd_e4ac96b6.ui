@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.568016",
-   "Default View_TopLeft":"-1479,1037",
+   "Default View_TopLeft":"1963,614",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
@@ -18,7 +18,6 @@ preplace inst axis_chsel_pfb_x1_1 -pg 1 -lvl 8 -x 2500 -y 1220 -defaultsOSRD -re
 preplace inst axis_constant_iq_0 -pg 1 -lvl 1 -x -250 -y 1590 -defaultsOSRD
 preplace inst axis_pfb_8x16_v1_0 -pg 1 -lvl 6 -x 1860 -y 910 -defaultsOSRD
 preplace inst axis_reorder_iq_v1_0 -pg 1 -lvl 4 -x 1160 -y 880 -defaultsOSRD
-preplace inst axis_xfft_16x32768_0 -pg 1 -lvl 8 -x 2500 -y 880 -defaultsOSRD
 preplace inst mr_buffer_et_0 -pg 1 -lvl 6 -x 1860 -y 1570 -defaultsOSRD
 preplace inst rst_100 -pg 1 -lvl 2 -x 270 -y 150 -defaultsOSRD
 preplace inst rst_adc0 -pg 1 -lvl 2 -x 270 -y 330 -defaultsOSRD
@@ -37,6 +36,7 @@ preplace inst ps8_0_axi_periph -pg 1 -lvl 3 -x 810 -y -110 -defaultsOSRD
 preplace inst usp_rf_data_converter_0 -pg 1 -lvl 2 -x 270 -y 1860 -defaultsOSRD
 preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1450 -y 1380 -defaultsOSRD
 preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 270 -y -60 -defaultsOSRD
+preplace inst axis_xfft_16x32768_0 -pg 1 -lvl 8 -x 2500 -y 880 -defaultsOSRD
 preplace netloc rst_adc0_peripheral_aresetn 1 1 10 -30 980 570J 980 1020 960 1300 960 1720 1020 2020 960 2380 960 2680 960 3040 1020 3370
 preplace netloc rst_dac0_peripheral_aresetn 1 0 4 -390 1950 -40 2040 NJ 2040 990
 preplace netloc rst_ps8_0_99M_peripheral_aresetn 1 0 12 -400 1000 -80 1000 630 1000 N 1000 N 1000 1690 1230 N 1230 2350 1330 2690 1440 3060 1250 3350 1000 3700

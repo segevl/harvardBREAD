@@ -71,13 +71,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="0"/>
-    <Option Name="WTModelSimExportSim" Val="0"/>
-    <Option Name="WTQuestaExportSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="3"/>
+    <Option Name="WTModelSimExportSim" Val="3"/>
+    <Option Name="WTQuestaExportSim" Val="3"/>
     <Option Name="WTIesExportSim" Val="0"/>
-    <Option Name="WTVcsExportSim" Val="0"/>
-    <Option Name="WTRivieraExportSim" Val="0"/>
-    <Option Name="WTActivehdlExportSim" Val="0"/>
+    <Option Name="WTVcsExportSim" Val="3"/>
+    <Option Name="WTRivieraExportSim" Val="3"/>
+    <Option Name="WTActivehdlExportSim" Val="3"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -103,6 +103,9 @@
         </FileInfo>
         <CompFileExtendedInfo CompFileName="d_1.bd" FileRelPathName="ip/d_1_usp_rf_data_converter_0_0/d_1_usp_rf_data_converter_0_0.xci">
           <Proxy FileSetName="d_1_usp_rf_data_converter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="d_1.bd" FileRelPathName="ip/d_1_axis_xfft_16x32768_0_0/d_1_axis_xfft_16x32768_0_0.xci">
+          <Proxy FileSetName="d_1_axis_xfft_16x32768_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/d_1/hdl/d_1_wrapper.v">
@@ -161,6 +164,22 @@
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
       <Filter Type="Utils"/>
+      <File Path="$PSRCDIR/utils_1/imports/Timing/Net_Delay/d_1_wrapper_routed.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedInSteps" Val="Net_Delay"/>
+          <Attr Name="AutoDcp" Val="1"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/utils_1/imports/Performance/d_1_wrapper.dcp">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedInSteps" Val="Performance"/>
+          <Attr Name="AutoDcp" Val="1"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
@@ -168,6 +187,12 @@
     <FileSet Name="d_1_usp_rf_data_converter_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/d_1_usp_rf_data_converter_0_0" RelGenDir="$PGENDIR/d_1_usp_rf_data_converter_0_0">
       <Config>
         <Option Name="TopModule" Val="d_1_usp_rf_data_converter_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="d_1_axis_xfft_16x32768_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/d_1_axis_xfft_16x32768_0_0" RelGenDir="$PGENDIR/d_1_axis_xfft_16x32768_0_0">
+      <Config>
+        <Option Name="TopModule" Val="d_1_axis_xfft_16x32768_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -207,16 +232,16 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Performance" Type="Ft3:Synth" SrcSet="sources_1" Part="xczu48dr-ffvg1517-2-e" ConstrsSet="constrs_1" Description="Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/Performance" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Performance" AutoRQSDir="$PSRCDIR/utils_1/imports/Performance">
+    <Run Id="Performance" Type="Ft3:Synth" SrcSet="sources_1" Part="xczu48dr-ffvg1517-2-e" ConstrsSet="constrs_1" Description="Higher performance designs, resource sharing is turned off, the global fanout guide is set to a lower number, FSM extraction forced to one-hot, LUT combining is disabled, equivalent registers are preserved, SRL are inferred  with a larger threshold" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/Performance/d_1_wrapper.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/Performance" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Performance" AutoRQSDir="$PSRCDIR/utils_1/imports/Performance">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Flow_PerfOptimized_high" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design">
           <Option Id="ShregMinSize">5</Option>
-          <Option Id="FsmExtraction">1</Option>
           <Option Id="KeepEquivalentRegisters">1</Option>
+          <Option Id="FsmExtraction">1</Option>
           <Option Id="NoCombineLuts">1</Option>
-          <Option Id="ResourceSharing">2</Option>
           <Option Id="Directive">7</Option>
+          <Option Id="ResourceSharing">2</Option>
         </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -225,6 +250,16 @@
       <RQSFiles/>
     </Run>
     <Run Id="d_1_usp_rf_data_converter_0_0_synth_1" Type="Ft3:Synth" SrcSet="d_1_usp_rf_data_converter_0_0" Part="xczu48dr-ffvg1517-2-e" ConstrsSet="d_1_usp_rf_data_converter_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/d_1_usp_rf_data_converter_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/d_1_usp_rf_data_converter_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/d_1_usp_rf_data_converter_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="d_1_axis_xfft_16x32768_0_0_synth_1" Type="Ft3:Synth" SrcSet="d_1_axis_xfft_16x32768_0_0" Part="xczu48dr-ffvg1517-2-e" ConstrsSet="d_1_axis_xfft_16x32768_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/d_1_axis_xfft_16x32768_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/d_1_axis_xfft_16x32768_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/d_1_axis_xfft_16x32768_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -259,7 +294,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="Net_Delay" Type="Ft2:EntireDesign" Part="xczu48dr-ffvg1517-2-e" ConstrsSet="constrs_1" Description="To compensate for optimistic delay estimation, add extra delay cost to long distance and high fanout connections. (high setting, most pessimistic)" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/Net_Delay" SynthRun="Performance" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Timing/Net_Delay" LaunchOptions="-jobs 2 " AutoRQSDir="$PSRCDIR/utils_1/imports/Net_Delay">
+    <Run Id="Net_Delay" Type="Ft2:EntireDesign" Part="xczu48dr-ffvg1517-2-e" ConstrsSet="constrs_1" Description="To compensate for optimistic delay estimation, add extra delay cost to long distance and high fanout connections. (high setting, most pessimistic)" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/Timing/Net_Delay/d_1_wrapper_routed.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/Net_Delay" SynthRun="Performance" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/Timing/Net_Delay" LaunchOptions="-jobs 2 " AutoRQSDir="$PSRCDIR/utils_1/imports/Net_Delay">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Performance_NetDelay_high" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
@@ -330,6 +365,23 @@
       <RQSFiles/>
     </Run>
     <Run Id="d_1_usp_rf_data_converter_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu48dr-ffvg1517-2-e" ConstrsSet="d_1_usp_rf_data_converter_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="d_1_usp_rf_data_converter_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/d_1_usp_rf_data_converter_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/d_1_usp_rf_data_converter_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="d_1_axis_xfft_16x32768_0_0_impl_1" Type="Ft2:EntireDesign" Part="xczu48dr-ffvg1517-2-e" ConstrsSet="d_1_axis_xfft_16x32768_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="d_1_axis_xfft_16x32768_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/d_1_axis_xfft_16x32768_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/d_1_axis_xfft_16x32768_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>
